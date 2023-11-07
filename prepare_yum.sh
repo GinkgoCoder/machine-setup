@@ -1,5 +1,6 @@
 #! /bin/bash
 sudo yum update -y
+sudo yum install util-linux-user -y
 sudo yum install zsh autojump -y
 
 sudo chsh -s $(which zsh) $USER
@@ -18,7 +19,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 curl -sLf https://spacevim.org/install.sh | bash
 
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sudo sh
 
 rm ~/.zshrc
 wget https://raw.githubusercontent.com/GinkgoCoder/machine-setup/main/.zshrc
