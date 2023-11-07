@@ -2,6 +2,8 @@
 sudo apt install zsh autojump -y
 
 sudo chsh -s $(which zsh) $USER
+
+zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
@@ -16,3 +18,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 curl -sLf https://spacevim.org/install.sh | bash
 
 curl -sS https://starship.rs/install.sh | sh
+
+rm ~/.zshrc
+wget https://raw.githubusercontent.com/GinkgoCoder/machine-setup/main/.zshrc
