@@ -1,12 +1,12 @@
 #! /bin/bash
-sudo yum update 
+sudo yum update -y
 sudo yum install zsh autojump -y
 
 sudo chsh -s $(which zsh) $USER
 
 zsh
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git  ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
 
 sudo yum install tmux -y
 git clone https://github.com/gpakosz/.tmux.git
