@@ -1,11 +1,13 @@
 #! /bin/bash
+sudo apt update -y
+sudo apt upgrade -y
 sudo apt install zsh autojump -y
 
 sudo chsh -s $(which zsh) $USER
 
-zsh
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
 
 sudo apt install tmux -y
 git clone https://github.com/gpakosz/.tmux.git
